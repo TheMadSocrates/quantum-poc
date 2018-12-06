@@ -1,0 +1,26 @@
+Usage
+=======
+
+$ ./qphase.py -h
+usage: qphase.py [-h] [-n N] [--phi PHI] [--latex] [--matplotlib]
+
+Quantum phase estimation test
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -n N          use an n-qubit vector
+  --phi PHI     input fraction to use
+  --latex       give latex output for run
+  --matplotlib  give matplotlib output
+
+
+
+Sample run
+============
+
+$ for n in {32..40}; do \
+./qphase.py -n 5 --phi ${n}/256 --latex > plot_${n}.tex; \
+done
+
+The above will generate a series of files named plot_32.tex to plot_40.tex
+which contain plots which can be rendered in LaTeX using the pgfplots package.

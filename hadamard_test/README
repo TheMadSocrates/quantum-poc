@@ -1,0 +1,26 @@
+Usage
+=======
+
+$ ./hadamard_test.py -h
+usage: hadamard_test.py [-h] [-n N] [--phi {random,one,zero}]
+
+Hadamard test
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n N                  size of the unitary matrix (default=2)
+  --phi {random,one,zero}
+                        input vector selection (default=random)
+
+
+Sample Run
+============
+$ ./hadamard_test.py -n 4
+
+
+
+Notes
+=======
+Result will be printed to standard output, intermediates will be printed to
+standard error. Printing of matrices and vectors uses the numpy defaults, some
+elements may be omitted depending the sizes.

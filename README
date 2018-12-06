@@ -1,0 +1,13 @@
+Some simulations for computations in Quantum Computing.
+
+The simulations are written in Python 3 and utilize the Numeric Python and
+Scientific Python libraries.
+
+The code requires Python 3.6+ due to usage of f-strings [PEP 498, DOC].
+
+Each Python script is self contained.
+
+
+
+[PEP 498] https://www.python.org/dev/peps/pep-0498/
+[DOC] https://docs.python.org/3/reference/lexical_analysis.html#f-strings

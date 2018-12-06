@@ -1,0 +1,33 @@
+Usage
+=======
+
+$ ./hamiltonian.py
+usage: hamiltonian.py [-h] [--step STEP]
+                      [--entry {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,random}]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --step STEP
+  --entry {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,random}
+
+
+
+Usage
+=======
+
+$ ./hamiltonian.py --entry 15 --step 0.1
+% requires \usepackage{tikz,pgfplots} in preamble
+\begin{tikzpicture}\begin{axis}
+[ymin=0,ymax=1.25,xmin=0,xmax=1,title={Using unique solution $\ket{01111}$},xlabel={$\tau$}, ylabel={Overlap},ytick distance=0.25,width=0.9\columnwidth, height=2.in,legend entries={$\braket{\varphi(0)}{\varphi(\tau)}$,$\braket{\varphi(1)}{\varphi(\tau)}$},legend style={at={(axis cs:0.05, 0.625)},anchor=west,legend columns=1},]
+\addplot+[mark=none] plot coordinates
+{ (0.000000, 1.000000) (0.100000, 0.999986) (0.200000, 0.999923) (0.300000, 0.999755) (0.400000, 0.999335) (0.500000, 0.998222) (0.600000, 0.994690) (0.700000, 0.977961) (0.800000, 0.808225) (0.900000, 0.335108) (1.000000, 0.176777) };
+\addplot+[mark=none] plot coordinates
+{ (0.000000, 0.176777) (0.100000, 0.181426) (0.200000, 0.187568) (0.300000, 0.196055) (0.400000, 0.208535) (0.500000, 0.228636) (0.600000, 0.266109) (0.700000, 0.356953) (0.800000, 0.673857) (0.900000, 0.964375) (1.000000, 1.000000) };
+\end{axis}\end{tikzpicture}
+
+
+Notes
+=======
+
+Program prints to standard output a series of commands that can be imported
+into a LaTeX document to generate a plot with pgfplots. 

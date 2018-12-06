@@ -1,0 +1,28 @@
+Usage
+=======
+
+$ ./hamiltonian.py -h
+usage: hamiltonian.py [-h] [--step STEP]
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --step STEP
+
+
+Sample run
+============
+$ ./hamiltonian.py --step .1
+% requires \usepackage{tikz,pgfplots} in preamble
+\begin{tikzpicture}\begin{axis}
+[ymin=-5.230291813303594,ymax=-2.4667900536604503,xmin=0,xmax=1,title={$H(\tau) = (1 - \tau)H_1 + \tau H_2$},xlabel={$\tau$}, ylabel={Eigenvalues},ytick distance=0.2763501759643143,width=0.9\columnwidth, height=2.5in,]
+\addplot+[mark=none] plot coordinates
+{ (0.000000, -5.000000) (0.100000, -4.511115) (0.200000, -4.050098) (0.300000, -3.629307) (0.400000, -3.270275) (0.500000, -3.013337) (0.600000, -2.924642) (0.700000, -3.036608) (0.800000, -3.288679) (0.900000, -3.619479) (1.0, -4.000000)};
+\addplot+[mark=none] plot coordinates
+{ (0.000000, -3.000000) (0.100000, -2.882352) (0.200000, -2.786911) (0.300000, -2.721454) (0.400000, -2.697082) (0.500000, -2.728707) (0.600000, -2.832828) (0.700000, -3.020071) (0.800000, -3.287214) (0.900000, -3.619449) (1.0, -4.000000)};
+\end{axis}\end{tikzpicture}
+
+
+Notes
+=======
+Program generates a plot that can be used in a LaTeX document alongside the
+pgfplots package. Plot is printed to standard output.

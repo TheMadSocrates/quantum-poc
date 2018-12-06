@@ -1,0 +1,26 @@
+Usage
+=======
+
+$ ./swap_test.py -h
+usage: swap_test.py [-h] [--phi {00,01,10,11,random}]
+
+Swap test for a 2-qbit input
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --phi {00,01,10,11,random}
+                        input vector selection (default=01)
+
+
+Sample Run
+============
+$ ./swap_test.py -n 4
+
+
+
+Notes
+=======
+This is a specialized version of the Hadamard test, but instead of using a
+random n x n unitary matrix, it uses the 2 x 2 swap matrix. Final result is
+printed to standard output, whilst intermediates are printed to standard error.
+Printing intermediates relies on numpy.
